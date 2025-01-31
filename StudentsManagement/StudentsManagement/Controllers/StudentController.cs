@@ -40,7 +40,7 @@ namespace StudentsManagement.Controllers
             return Ok(newstudent);
         }
 
-        [HttpGet("Delete-Student/{id}")]
+        [HttpPost("Delete-Student/{id}")]
         public async Task<ActionResult<Student>> DeletestudentAsync(int id)
         {
             var deletestudent = await _studentRepository.DeletestudentAsync(id);
